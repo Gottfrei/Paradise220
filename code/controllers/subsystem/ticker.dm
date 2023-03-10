@@ -138,25 +138,25 @@ SUBSYSTEM_DEF(ticker)
 		// 	Master.SetRunLevel(RUNLEVEL_POSTGAME) // This shouldnt process more than once, but you never know
 		// 	auto_toggle_ooc(TRUE) // Turn it on
 
-		// 	declare_completion()
-			if(!SSmapping.next_map) //Next map already selected by admin
-				var/list/all_maps = subtypesof(/datum/map)
-				for(var/i in 1 to all_maps.len)
-					var/datum/map/map_check = all_maps[i]
-					if(map_check.admin_only)
-						all_maps -= map_check
-				switch(config.map_rotate)
-					if("rotate")
-						for(var/i in 1 to all_maps.len)
-							if(istype(SSmapping.map_datum, all_maps[i]))
-								var/target_map = all_maps[(i % all_maps.len) + 1]
-								SSmapping.next_map = new target_map
-								break
-					if("random")
-						var/target_map = pick(all_maps)
-						SSmapping.next_map = new target_map
-					else
-						SSmapping.next_map = SSmapping.map_datum
+			// declare_completion()
+			// if(!SSmapping.next_map) //Next map already selected by admin
+			// 	var/list/all_maps = subtypesof(/datum/map)
+			// for(var/i in 1 to all_maps.len)
+			//	 	var/datum/map/map_check = all_maps[i]
+			// 		if(map_check.admin_only)
+			// 			all_maps -= map_check
+			// 	switch(config.map_rotate)
+			// 		if("rotate")
+			// 			for(var/i in 1 to all_maps.len)
+			// 				if(istype(SSmapping.map_datum, all_maps[i]))
+			// 					var/target_map = all_maps[(i % all_maps.len) + 1]
+			// 					SSmapping.next_map = new target_map
+			// 					break
+			// 		if("random")
+			// 			var/target_map = pick(all_maps)
+			// 			SSmapping.next_map = new target_map
+			// 		else
+			// 			SSmapping.next_map = SSmapping.map_datum
 
 		// 	spawn(50)
 		// 		if(mode.station_was_nuked)
@@ -164,7 +164,7 @@ SUBSYSTEM_DEF(ticker)
 		// 		else
 		// 			reboot_helper("Round ended.", "proper completion")
 
-			to_chat(world, "<B>The next map is - [SSmapping.next_map.name]!</B>")
+			// to_chat(world, "<B>The next map is - [SSmapping.next_map.name]!</B>")
 
 /datum/controller/subsystem/ticker/proc/setup()
 	cultdat = setupcult()
