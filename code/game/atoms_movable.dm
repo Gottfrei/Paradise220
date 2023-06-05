@@ -300,8 +300,8 @@
 		loc = null
 		var/area/old_area = get_area(old_loc)
 		if(is_multi_tile && isturf(old_loc))
-			for(var/atom/old_loc as anything in locs)
-				old_loc.Exited(src, NONE)
+			for(var/atom/old_loc_multi as anything in locs)
+				old_loc_multi.Exited(src, NONE)
 		else
 			old_loc.Exited(src, NONE)
 
