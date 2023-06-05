@@ -351,7 +351,7 @@
 		return FALSE
 
 	var/mob/living/carbon/human/H = user
-	if(!H.is_in_hands(src)) // Not holding the soulstone
+	if(!H.is_type_in_hands(src)) // Not holding the soulstone
 		return FALSE
 	return TRUE
 
@@ -425,7 +425,7 @@
 		M.dust()
 	else
 		for(var/obj/item/I in M)
-			M.unEquip(I)
+			M.drop_item_ground(I)
 		M.dust()
 
 /obj/item/soulstone/proc/get_shade_type()

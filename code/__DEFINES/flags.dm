@@ -25,6 +25,7 @@
 #define THICKMATERIAL 			8192	//prevents syringes, parapens and hypos if the external suit or helmet (if targeting head) has this flag. Example: space suits, biosuit, bombsuits, thick suits that cover your body. (NOTE: flag shared with BLOCK_GAS_SMOKE_EFFECT)
 
 #define DROPDEL					16384	// When dropped, it calls qdel on itself
+#define NO_PIXEL_RANDOM_DROP	32768	// If dropped, it wont have a randomized pixel_x/pixel_y
 
 
 /* Secondary atom flags, for the flags_2 var, denoted with a _2 */
