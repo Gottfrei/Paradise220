@@ -36,7 +36,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = 0
-	flags = DROPDEL | ABSTRACT | NOBLUDGEON | NODROP
+	flags = DROPDEL | ABSTRACT | NOBLUDGEON
 	ammo_type = list(/obj/item/ammo_casing/energy/shuriken)
 	can_charge = 0
 	burst_size = 3

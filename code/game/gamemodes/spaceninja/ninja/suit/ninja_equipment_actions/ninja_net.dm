@@ -33,7 +33,7 @@
 	item_state = ""
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = 0
-	flags = DROPDEL | ABSTRACT | NOBLUDGEON | NODROP
+	flags = DROPDEL | ABSTRACT | NOBLUDGEON
 	var/obj/item/clothing/suit/space/space_ninja/my_suit = null
 	var/datum/action/item_action/advanced/ninja/ninjanet/my_action = null
 
